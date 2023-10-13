@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Land</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="website icon" type="png" href="./images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <nav class="header">
+                <ul>
+                    <li>
+                        <a href="" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Properties</a>
+                    </li>
+                    <li>
+                        <a href="">Members</a>
+                    </li>
+                    <li>
+                        <a href="">Pages</a>
+                    </li>
+                    <li>
+                        <a href="">Blogs</a>
+                    </li>
+                </ul>
+                <div class="login-signup">
+                    <a class="signin" onclick="openlogin(), blur()" href="#mylogin">Login</a> or <a class="signin" href="#mylogin">Signup</a>
+                </div>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="login-signup">
+                <a class="signin" onclick="openlogin(), blur()" href="#mylogin">Login</a> or <a class="signin" href="#mylogin">Signup</a>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+            <h1 class="top">Choose Your Best<br />Happy Land !</h1>
+            <span>Real Estate & Properties For Sale Or Rent<br />In 12+ countries</span>
+        <div class="banner-img">
+            <img class="first" src="./images/buildings.jpg" alt="">
+            <img class="second" src="./images/banner_2nd.jpg" alt="">
+        </div>
+        <div class="circle"></div>
+        </div>
+    </main>
+    <div class="content">
+        <div class="button">
+            <button class="b1"><a href="">Buy</a></button>
+            <button class="b2 active"><a href="">Rent</a></button>
+        </div>
+        <section>
+            <div class="selector">
+                <ul>
+                    <li>
+                        <span>Property type</span><br />
+                        <!-- <span class="opacity">show all</span> <i class="fa-solid fa-angle-down" style="color: #000000;"></i> -->
+                        <div class="dropdown property">
+                            <input type="text" class="textBox1" placeholder="show all" readonly>
+                            <div class="option">
+                                <div onclick="show1('Residential')">Residential</div>
+                                <div onclick="show1('Commercial')">Commercial</div>
+                                <div onclick="show1('Industrial')">Industrial</div>
+                                <div onclick="show1('Agricultural')">Agricultural</div>
+                                <div onclick="show1('Special')">Special</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Bedrooms</span><br />
+                        <!-- <span class="opacity">Any Beds</span> <i class="fa-solid fa-angle-down" style="color: #000000;"></i> -->
+                        <div class="dropdown bedroom">
+                            <input type="text" class="textBox2" placeholder="Any Beds" readonly>
+                            <div class="option">
+                                <div onclick="show2('Modern')">Modern</div>
+                                <div onclick="show2('Guest')">Guest</div>
+                                <div onclick="show2('Studio')">Studio</div>
+                                <div onclick="show2('Dormitory')">Dormitory</div>
+                                <div onclick="show2('Quad')">Quad</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Price range</span><br />
+                        <!-- <span class="opacity">Any price</span> <i class="fa-solid fa-angle-down" style="color: #000000;"></i> -->
+                        <div class="dropdown price">
+                            <input type="text" class="textBox3" placeholder="Any price" readonly>
+                            <div class="option">
+                                <div onclick="show3('100k - 200k')">100k - 200k</div>
+                                <div onclick="show3('200k - 300k')">200k - 300k</div>
+                                <div onclick="show3('300k -400k')">300k -400k</div>
+                                <div onclick="show3('400k - 500k')">400k - 500k</div>
+                                <div onclick="show3('500k - 1000k')">500k - 999k</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <button><a href="#properties">Search</a></button>
+            </div>
+        </section>
+        <div class="details">
+            <div class="box">
+                <h1>Flexible <span>Services</span></h1>
+            </div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">
+                <p>With over $2 Billion in sales, due to our unparalleled results, we rank amongstvthe top 6 agencies is Las Vegas. Our agency is the industry's to luxury producer.</p>
+                <button>More about us </button>
+            </div>
+            <div class="box"><h4>Buy a home</h4><i class="fa-solid fa-circle-chevron-down"></i></div>
+            <div class="box"><h4>Rent a home</h4><i class="fa-solid fa-circle-chevron-down"></i></div>
+            <div class="box"><i class="fa-regular fa-building"></i><h4>See neighourhoods</h4><span>With more neighourhood<br /> insights than any other real<br /> estate website.</span></div>
+        </div>
+    </div>
+    <div class="container" id="blur">
+    </div>
+    <div class="login" id="mylogin">
+        <div class="cross"><button type="button" onclick="closelogin()">&#x2717</button></div>
+        <h2>Sign In</h2>
+        <div class="inputbox">
+            <input type="text" placeholder="Username">
+        </div>
+        <div class="inputbox">
+            <input type="password" placeholder="Password">
+        </div>
+        <div class="inputbox">
+            <input type="submit" value="Login" id="btn">
+            <div class="group">
+                <a href="#">Forgot Password ?</a>
+                <a href="#">Signup</a>
+            </div>
+        </div>
+    </div>
+    <section class="countings">
+        <h2 class="countings" id="properties">What's happening in Kansas City, MO</h2>
+        <div class="countings">
+            <ul class="countings">
+                <li><h1>1,946</h1><span>Homes for sale</span></li>
+                <li><h1>59</h1><span>Open houses</span></li>
+                <li><h1>3,115</h1><span>Recently sold</span></li>
+                <li><h1>197</h1><span>Price reduced</span></li>
+                <li><h1>5</h1><span>Foreclosures</span></li>
+            </ul>
+        </div>
+        <h4 class="counting_cards">View All 391 New Listings</h4>
+        <div class="counting_cards">
+            <div class="box">
+                <img src="./images/home1.jpg" alt="home1" width="5641" height="3346">
+                <i class="fa-solid fa-heart"></i>
+                <div class="home-info">
+                    <span><i class="fa-solid fa-square"></i> Single-Family Home</span>
+                    <h3>$509,000</h3>
+                    <ul>
+                        <li><b>4</b> bed</li>
+                        <li><b>3</b> bath</li>
+                        <li><b>2,729</b> sqft</li>
+                    </ul>
+                    <p>8709 N Allenton Ave <br>Kansas City, MO 64154</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/home2.jpg" alt="home2" width="5168" height="3448">
+                <i class="fa-solid fa-heart"></i>
+                <div class="home-info">
+                    <span><i class="fa-solid fa-square"></i> Single-Family Home</span>
+                    <h3>$475,000</h3>
+                    <ul>
+                        <li><b>4</b> bed</li>
+                        <li><b>2.5</b> bath</li>
+                        <li><b>2,960</b> sqft</li>
+                    </ul>
+                    <p>10103 NE 102nd Ter <br>Kansas City, MO 64157</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/home3.jpg" alt="home3" width="3648" height="2432">
+                <i class="fa-solid fa-heart"></i>
+                <div class="home-info">
+                    <span><i class="fa-solid fa-square"></i> Single-Family Home</span>
+                    <h3>$250,000</h3>
+                    <ul>
+                        <li><b>3</b> bed</li>
+                        <li><b>2</b> bath</li>
+                        <li><b>2,376</b> sqft</li>
+                    </ul>
+                    <p>515 E 89th Ter <br>Kansas City, MO 64131</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/home4.jpg" alt="home4" width="6720" height="4480">
+                <i class="fa-solid fa-heart"></i>
+                <div class="home-info">
+                    <span><i class="fa-solid fa-square"></i> Single-Family Home</span>
+                    <h3>$349,000</h3>
+                    <ul>
+                        <li><b>4</b> bed</li>
+                        <li><b>3.5</b> bath</li>
+                        <li><b>2,662</b> sqft</li>
+                    </ul>
+                    <p>6817 N Corrington Ave <br>Kansas City, MO 64119</p>
+                </div>
+            </div>
+        </div>
+        <div class="view-more">
+            <button>View More</button>
+        </div>
+        <hr class="rental_hr">
+    </section>
+    <section class="rentals">
+        <h1 class="h1-rentals">The Most Rental Listings</h1>
+        <p>Choose from over 1 million apartments, houses, condos, and townhomes for rent.</p>
+        <div class="split">
+            <div class="box">
+                <div class="text-split">
+                    <h1>Renting Made Simple</h1>
+                    <span>
+                        Browse the highest quality listings, apply online, sign <br /> your lease, and even pay your rent from any device.
+                    </span>
+                    <h2>Find Out More &nbsp;<i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></h2>
+            </div>
+            </div>
+            <div class="box">
+                <img src="./images/split-img1.jpg" alt="laptop" width="3464" height="2309" class="img">
+            </div>
+            <div class="box">
+                <img src="./images/split-img2.jpg" alt="family" width="740" height="493" class="img">
+            </div>
+            <div class="box">
+                <div class="text-split">
+                    <h1>Tips for Renters</h1>
+                    <span>
+                        Find answers to all of your renting questions with the <br /> best renter’s guide in the galaxy.
+                    </span>
+                    <h2>Browse Articles &nbsp;<i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></h2>
+                </div>
+            </div>
+            <div class="box">
+                <div class="text-split">
+                    <h1>Take Us With You</h1>
+                    <span>
+                        Keep <span class="link">HappyLand.com</span> in the palm of your hand <br /> throughout your rental journey.
+                    </span>
+                    <figure>
+                        <img src="./images/app-store.png" alt="app-store" width="775" height="300">
+                        <img src="./images/Play-store.png" alt="play-store" width="1404" height="569">
+                    </figure>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/split-img3.jpg" alt="phone" width="740" height="493" class="img">
+            </div>
+        </div>
+    </section>
+    <h1 class="card">Customer Reviews</h1>
+    <div class="card_section">
+        <div class="card">
+            <figure>
+                <img src="./images/clients/client1.jpg" alt="" class="clients">
+                <figcaption class="client_name">Albert Dera</figcaption>
+            </figure>
+            <div class="incard"><q>Though we were a bit hesitant but choosing KRC over others seems fruitful to us, the builder stands true to his statement. </q></div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="./images/clients/client2.jpg" alt="" class="clients">
+                <figcaption class="client_name">Christopher</figcaption>
+            </figure>
+            <div class="incard"><q>Impeccable amenities, well-maintained society, great security system, spacious balconies, serene ambiance.</q></div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="./images/clients/client3.jpg" alt="" class="clients">
+                <figcaption class="client_name">Harps Joseph</figcaption>
+            </figure>
+            <div class="incard"><q>We find ourselves extremely lucky! I mean knowing a trusted brand and owning the property built by the same have two different aspects.</q></div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="./images/clients/client4.jpg" alt="" class="clients">
+                <figcaption class="client_name">Jurica Coletic</figcaption>
+            </figure>
+            <div class="incard"><q>The homes imbued a sense of peace & serenity, and the facilities that the builder has accommodated the property with only deserve appreciation!</q></div>
+        </div>
+    </div>
+    <p class="customer_attract">Looking for your dream home? Look no further than our real estate website! Our expert team of agents is dedicated to helping you find the perfect property to fit your needs and lifestyle. With a wide range of listings across various locations, our website offers comprehensive information on each property, including detailed descriptions, high-quality images, and virtual tours. Whether you're a first-time homebuyer or a seasoned investor, our user-friendly platform and personalized service ensure a seamless and stress-free experience. Don't settle for less than your dream home – let us help you find it today!</p>
+    <section class="bottom_banner">
+        <div class="subscribe">
+            <ul>
+                <li>
+                    <h2>Let's stay in touch</h2>
+                </li>
+                <li>
+                    Enjoy 15% off on your first order on joining mailing list.
+                </li>
+                <li>
+                    <input type="text" placeholder="Enter your email address">
+                    <button>Subscribe</button>
+                </li>
+                <li>
+                    We respect your privacy, so we never share your info.
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="payment">
+        <ul>
+            <li><i class="fa-brands fa-cc-paypal fa-2xl" style="color: #ffffff;"></i></li>
+            <li><i class="fa-brands fa-cc-amazon-pay fa-2xl" style="color: #ffffff;"></i></li>
+            <li><i class="fa-brands fa-cc-visa fa-2xl" style="color: #ffffff;"></i></li>
+            <li><i class="fa-brands fa-cc-mastercard fa-2xl" style="color: #ffffff;"></i></li>
+            <li><i class="fa-brands fa-cc-discover fa-2xl" style="color: #ffffff;"></i></li>
+        </ul>
+    </section>
+    <footer>
+        <section class="footer_grid">
+            <div class="footer_box">
+                <figure>
+                    <img class="footer_logo" src="images/logo.png" alt="logo" height="1145" width="1046">
+                    <figcaption class="footer_logo_caption">HAPPYLAND</figcaption>
+                </figure>
+                <p class="footer_p">Follow us on</p>
+                <ul class="footer_ul1">
+                    <li><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></li>
+                    <li><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></li>
+                    <li><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></li>
+                </ul>
+            </div>
+            <div class="footer_box">
+                <ul class="footer_ul2">
+                    <h3>Product</h3>
+                    <li>
+                        How it works ?
+                    </li>
+                    <li>
+                        Investment
+                    </li>
+                    <li>
+                        Performance
+                    </li>
+                    <li>
+                        Resources
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_box">
+                <ul class="footer_ul2">
+                    <h3>Company</h3>
+                    <li>
+                        About Us
+                    </li>
+                    <li>
+                        Contact Us
+                    </li>
+                    <li>
+                        Help Center
+                    </li>
+                    <li>
+                        FAQ's
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_box">
+                <ul class="footer_ul2">
+                    <h3>Legal</h3>
+                    <li>
+                        Terms & Conditions
+                    </li>
+                    <li>
+                        Privacy Policy
+                    </li>
+                    <li>
+                        Disclaimer
+                    </li>
+                    <li>
+                        Sitemap
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_box">
+                <ul class="footer_ul2">
+                    <h3>Contact Us</h3>
+                    <li>
+                        <i class="fa-solid fa-user" style="color: #ffffff;"></i>&nbsp;&nbsp;&nbsp;
+                        36-Skyrise Duraiz, 9th Floor <br />
+                        <span class="address_footer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;San Francisco - 390008</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>&nbsp;&nbsp;&nbsp;
+                        happyland@gmail.com
+                    </li>
+                    <li>
+                        <i class="fa-sharp fa-solid fa-phone" style="color: #ffffff;"></i>&nbsp;&nbsp;&nbsp; 
+                        +(281)-455-9032
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+    <!-- <script>
+        hamburger = document.querySelector(".hamburger");
+        nav = document.querySelector("nav");
+        hamburger.onclick = function() {
+            nav.classList.toggle("active");
+        }
+        function openlogin() {
+            document.getElementById("mylogin").style.display="block";
+            document.getElementById("blur").style.display="block";
+        }
+        function closelogin() {
+            document.getElementById("mylogin").style.display="none";
+            document.getElementById("blur").style.display="none";
+        }
+        function show1(anything) {
+            document.querySelector('.textBox1').value = anything;
+        }
+        function show2(anything) {
+            document.querySelector('.textBox2').value = anything;
+        }
+        function show3(anything) {
+            document.querySelector('.textBox3').value = anything;
+        }
+        let dropdown1 = document.querySelector('.property');
+        dropdown1.onclick = function() {
+            dropdown1.classList.toggle("active");
+        }
+        let dropdown2 = document.querySelector('.bedroom');
+        dropdown2.onclick = function() {
+            dropdown2.classList.toggle("active");
+        }
+        let dropdown3 = document.querySelector('.price');
+        dropdown3.onclick = function() {
+            dropdown3.classList.toggle("active");
+        }
+        </script> -->
+        <script src="./js/script.js"></script>
+</body>
+</html>
